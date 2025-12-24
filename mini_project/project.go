@@ -1,0 +1,6 @@
+package miniproject
+
+func Project(){
+
+	
+}
