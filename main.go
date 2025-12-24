@@ -1,6 +1,8 @@
 package main
 
-import "golang-day3/practice"
+import (
+	miniproject "golang-day3/mini_project"
+)
 
 func main() {
 	// practice.Numbers()
@@ -8,7 +10,8 @@ func main() {
 	// practice.Factorial()
 	// practice.Table()
 	// practice.Reverse()
-	practice.Palindrome()
+	// practice.Palindrome()
 	// practice.Factorial()
+	miniproject.Project()
 
 }
