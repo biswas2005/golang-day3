@@ -11,15 +11,24 @@ func Project() {
 		fmt.Println("3.Reverse number.")
 		fmt.Println("4.Sum of digits.")
 		fmt.Println("5.Exit")
+
+		//Choice allows the user to select an operation
 		var choice int
 		fmt.Println("Enter your choice: ")
 		fmt.Scan(&choice)
 
+		//Choice 5 to return
+		if choice == 5 {
+			fmt.Println("Exiting loop...")
+			return
+		}
+		//input takes the value from user
 		var input int
 		fmt.Println("Enter any number: ")
 		fmt.Scan(&input)
 
 		switch choice {
+		//case 1 checks if the input is EVEN or ODD
 		case 1:
 			if input%2 == 0 {
 				fmt.Println("It is a EVEN number.")
@@ -27,10 +36,11 @@ func Project() {
 			} else {
 				fmt.Println("It is a ODD number.")
 			}
+			//case 2 checks for input if PRIME or not
 		case 2:
 			if input <= 1 {
 				fmt.Println("Invalid number.")
-				return
+				break
 
 			}
 			isPrime := true
@@ -47,6 +57,7 @@ func Project() {
 			if isPrime {
 				fmt.Println("It is a PRIME number.")
 			}
+			//case 3 prints the REVERSE of the input
 		case 3:
 			source := 0
 
@@ -56,6 +67,7 @@ func Project() {
 				input = input / 10
 			}
 			fmt.Println(source)
+			//case 4 gives the SUM OF DIGITS as output
 		case 4:
 
 			source1 := 0
@@ -65,9 +77,7 @@ func Project() {
 				input = input / 10
 			}
 			fmt.Println(source1)
-		case 5:
-			fmt.Println("Exiting loop....")
-			return
+
 		default:
 			fmt.Println("Invalid choice,please choose a valid option.")
 
